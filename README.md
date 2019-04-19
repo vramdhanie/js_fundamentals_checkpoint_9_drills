@@ -36,3 +36,28 @@ function three() {
 
 three();
 ```
+
+## 2
+**Learning:**
+
+**Question:** The function below accepts three callback functions named `start`, `tick` and `done`. It invokes `start` once, then invokes `tick` ten times with a half second delay between invocations passing a countdown parameter each time. That is, the first time it calls `tick` it passes 10, then 9 and so on down to 1. After `tick` is called 10 times, the `done` function is called once.
+
+Write three functions, the first prints 'Starting countdown', the second accepts a single numeric value and prints the value and the third prints 'BOOM!'. Call the `countdown` function passing your three functions as callbacks. If it works correctly you should see the countdown occur in the console.
+
+```
+function countdown(start, tick, done) {
+  start();
+  (function loop(i) {
+    setTimeout(function() {
+      tick(i--);
+      if(i > 0){
+        loop(i);
+      } else {
+        done();
+      }
+    }, 500);
+  })(10);
+}
+```
+
+Write three different functions. The first prints 'Download starting', the second accepts a numeric value as described above and prints '100% left', '90% left' and so on. The last one prints 'Download conplete'. Invoke the `countdown` function again with the three new functions.
