@@ -14,3 +14,25 @@ As well as setTimeout / setImmediate / maybe `new Date()`
 Higher order functions
 
 ## 1
+
+**Learning:**
+
+**Question:** Consider the code below. What would be printed in the console when this code executes?
+
+```
+function one() {
+  console.log('one');
+}
+
+function two(callback) {
+  console.log('two');
+  callback();
+}
+
+function three() {
+  console.log('three');
+  two(one);
+}
+
+three();
+```
