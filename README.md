@@ -38,6 +38,24 @@ three();
 ```
 
 ## 2
+
+**Learning:**
+
+**Question:** 
+ - Write a function named `process` that accepts three parameters.
+   - The first parameter named `fn` is an arbitrary function
+   - The second parameter named a is a numeric value
+   - The third parameter named b is a numeric value
+ - `process` should call the function `fn` passing the arguments `a` and `b`
+ - After `fn` is done executing `process` should return the value returned by `fn`.
+ - Create 2 more functions `add` and `subtract`
+   - `add` accepts two parameters `a` and `b` and returns `a + b`
+   - `subtract` accepts two parameters `a` and `b`and returns `a - b`
+ - Use the `process` function to call `add` with 6 and 4
+ - Use the `process` function to call `subtract` with 6 and 4
+
+
+## ? (Rethink or remove this one)
 **Learning:**
 
 **Question:** The function below accepts three callback functions named `start`, `tick` and `done`. It invokes `start` once, then invokes `tick` ten times with a half second delay between invocations passing a countdown parameter each time. That is, the first time it calls `tick` it passes 10, then 9 and so on down to 1. After `tick` is called 10 times, the `done` function is called once.
